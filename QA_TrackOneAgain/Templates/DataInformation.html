@@ -1,0 +1,70 @@
+{% extends "Layout.html" %}
+
+{% block content %}
+<center>
+<h1>Auditing Information </h1>
+ <div class="container">
+    
+    <div class="card" style="width: 18rem;">
+      <div class="card-header">
+        <strong>Policy Number</strong>
+           Policy Number - {{TheDataInformation.Policy_Number}}<br>
+        </div>
+        <ul class="list-group list-group-flush">
+          <strong>Case Number - </strong>
+          <li class="list-group-item">
+            {{TheDataInformation.Case_Number}}<br>
+          </li>
+          <strong>AVS Check</strong>
+          <li class="list-group-item">
+             - {{TheDataInformation.AVS_Check}}<br>
+          </li>
+          <strong>Caller ID</strong>
+          <li class="list-group-item">
+             - {{TheDataInformation.Caller_ID}}<br>
+          </li>
+          <strong>Call Duration </strong>
+          <li class="list-group-item">
+            - {{TheDataInformation.Call_duration}}<br>
+          </li>
+          <strong>Policy Premium</strong>
+          <li class="list-group-item">
+             - {{TheDataInformation.Premium}}<br>
+          </li>
+          <strong>Policy Debit date</strong>
+          <li class="list-group-item">
+             - {{TheDataInformation.Debit_date}}<br>
+          </li>
+          <strong>Cover Amount</strong>
+          <li class="list-group-item">
+             - {{TheDataInformation.Cover_amount}}<br>
+          </li>
+          <strong>Q.A. Outcome</strong>
+          <li class="list-group-item">
+             - {{TheDataInformation.QA_Correct}}<br>
+          </li>
+          <strong>KPA Outcome One</strong>
+          <li class="list-group-item">
+             - {{TheDataInformation.KPA_1}}<br>
+          </li>
+          <strong>KPA Outcome Two</strong>
+          <li class="list-group-item">
+             - {{TheDataInformation.KPA_2}}<br>
+          </li>
+          <strong>KPA Outcome Three</strong>
+          <li class="list-group-item">
+             - {{TheDataInformation.KPA_3}}<br>
+          </li>
+          <strong>HIV Test Required</strong>
+          <li class="list-group-item">
+             - {{TheDataInformation.HIV_Required}}<br>
+          </li>
+          <strong>Comments to agent</strong>
+          <li class="list-group-item">
+             - {{TheDataInformation.Comment}}<br>
+          </li>
+        </ul>
+      </div>
+ </div>
+</center>
+{% endblock %}

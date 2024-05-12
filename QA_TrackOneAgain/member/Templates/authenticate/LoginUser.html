@@ -1,0 +1,38 @@
+{% extends "Layout.html" %}
+
+ {% block content %}
+ 
+ <div class="container">
+
+  <h1>SouthSide.</h1>
+    <center>
+        <h4>Login</h4>
+    </center>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <form>
+            <div class="mb-3">
+              <input type="text" class="form-control" name="username" placeholder="Enter your Name">
+              <br>
+            <div class="mb-3">
+              <input type="password" class="form-control" name="password" placeholder="Enter your Password">
+            </div>
+            <button type="submit" class="btn btn-primary">Enter</button>
+          </form>
+<br>
+          {% if messages %}
+          {% for message in messages %}
+
+          <div class="p-3 text-danger-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
+            {{message}}
+        </div>
+
+
+          {% endfor %}
+
+          {% endif %}
+
+    </form>
+ </div>
+
+{% endblock %}

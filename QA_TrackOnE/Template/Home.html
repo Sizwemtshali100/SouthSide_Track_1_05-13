@@ -1,0 +1,18 @@
+{% extends "Layout.html" %}
+
+{% block content %}
+
+<h1>Home </h1>
+ <div class="container">
+        <br>
+
+       <form action="" method="POST">
+       {% csrf_token %}
+
+       {{ TheForm }}
+
+       <input type="submit" value="submit">
+       </form>
+
+ </div>
+{% endblock %}

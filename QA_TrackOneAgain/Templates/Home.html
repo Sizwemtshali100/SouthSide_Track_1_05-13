@@ -1,0 +1,38 @@
+{% extends "Layout.html" %}
+
+{% block content %}
+<center>
+<h1>Home - {{request.user}}</h1>
+</center> 
+<div class="container">
+        <br>
+        <table class="table table-dark table-hover">
+            <tr>
+                <th>
+                    Policy Number
+                </th>
+                <th>
+                    Case Number
+                </th>
+                <th>
+                    Agent Posted
+                </th>
+            </tr>
+            {% for Information in TheData %}
+            <tr>
+                <td>
+                    {{Information.Policy_Number}}<br>
+                </td>
+                <td>
+                    <a href="{% url 'DataInformation' Information.id %}">
+                    {{Information.Case_Number}}
+                </a>
+                </td>
+                <td>
+                    {{Information.Agents}}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+ </div>
+{% endblock %}

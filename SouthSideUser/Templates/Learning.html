@@ -1,0 +1,52 @@
+{% extends "Layout.html" %}
+
+{% block content %}
+<div class="container">
+<h1>
+Learning
+</h1>
+<a href="{% url 'Home' %}">Home</a>
+<a href="{% url 'Dashboard' %}">Dashboards</a><br>
+<a href="{% url 'Dashboard_agent' %}">Dashboard_agent</a>
+<a href="{% url 'Learning' %}">Learning</a>
+
+<div class="container">
+    <br>
+    {{egypt_count_EMEA_1}}<br>
+    {{egypt_count_LATAM_1}}<br>
+    {{egypt_count_NA_1}}<br>
+    {{egypt_count_APAC_1}}<br>
+    <br>
+    <div>
+        <canvas id="myChart"></canvas>
+      </div>
+      
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+      <script>
+        const ctx = document.getElementById('myChart');
+      
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            datasets: [{
+              label: '# of Votes',
+              data: {{egypt_count_APAC_1|safe}},
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+      </script>
+      
+</div>
+<br>
+
+{% endblock content %}

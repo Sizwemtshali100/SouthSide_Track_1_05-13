@@ -1,0 +1,28 @@
+{% extends "Layout.html" %}
+
+{% block content %}
+
+<h1>Home - Manager</h1>
+ <div class="container">
+        <br>
+
+        <table class="table table-dark table-hover">
+            {% for Information in TheData %}
+            <tr>
+                <td>
+                    {{Information.Policy_Number}}<br>
+                </td>
+                <td>
+                   <a href={% url 'DataInformation' Information.id  %}>
+                      {{Information.Case_Number}}<br>
+                   </a>
+                </td>
+                <td>
+                    {{Information.QA_Correct}}<br>
+                </td>
+            </tr>
+            {% endfor %}
+
+        </table>
+ </div>
+{% endblock %}

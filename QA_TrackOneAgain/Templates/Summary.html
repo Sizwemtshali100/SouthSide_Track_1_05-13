@@ -1,0 +1,102 @@
+{% extends "Layout.html" %}
+
+{% block content %}
+
+<div class="container">
+<center>
+    <h1>Summary </h1>
+</center>  
+    <hr>
+    <h3>
+      KPA Q.A. Outcome
+    </h3>
+    <div class="row">
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <div class="card-header">
+                  QAOutcomesDC           
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">{{QAOutcomesDC}}</li>
+                </ul>
+              </div>
+        </div>
+        <br>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <div class="card-header">
+                    Compliance
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">{{QAOutcomesCompliance}}</li>
+                </ul>
+              </div>
+        </div>
+        <br>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <div class="card-header">
+                    Product
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">{{QAOutcomesProduct}}</li>
+                </ul>
+              </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <div class="card-header">
+                    Pass
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">{{QAOutcomesPass}}</li>
+                </ul>
+              </div>
+        </div>
+        <br>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <div class="card-header">
+                    TCF
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">{{QAOutcomesTCF}} </li>
+                </ul>
+              </div>
+                </div>
+        </div>
+        <hr>
+        <h3>Number of HIV Required sales</h3>
+    <div class="row">
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <div class="card-header">
+              HIV Required Yes
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              {{QAHIVYES}}
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <div class="card-header">
+              HIV Required No
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              {{QAHIVNO}}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </div>
+    
+
+{% endblock %}

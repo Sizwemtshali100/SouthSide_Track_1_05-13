@@ -1,0 +1,40 @@
+{% extends "Layout.html" %}
+
+{% block content %}
+
+        <div class="container">
+              <canvas id="myChartBar" ></canvas>
+           
+              <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+              
+              <script>
+                const ctx = document.getElementById('myChartBar');
+        
+                new Chart(ctx, {
+                  type: 'bar',
+                  data: {
+                    labels: {{ labels|safe }},
+                    datasets: [{
+                      label: 'Completed Work',
+                      data: {{ data|safe }},
+                      borderWidth: 1,
+                      borderColor: ['green', 'red'],
+                    }]
+                  },
+                  options: {
+                    scales: {
+                      yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                            max: 10,
+                             // Set maximum scale to 10
+                        }
+                    }]
+                    }
+                  }
+                });
+              </script>
+ 
+      </div>
+
+{% endblock %}

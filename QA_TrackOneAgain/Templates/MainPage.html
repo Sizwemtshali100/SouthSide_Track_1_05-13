@@ -1,0 +1,129 @@
+{% extends "Layout.html" %}
+
+{% block content %}
+
+ <div class="container">
+    <center>
+        <h1>Audit Page</h1>
+    </center>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="container text-center">
+          
+            <div class="row">
+                <div class="col">
+                    <input class="form-control form-control-sm" aria-label=".form-control-sm example" type="text" name="Policy_Number" placeholder="Policy Number" required><br>
+                </div>
+                <div class="col">
+                    <input class="form-control form-control-sm" aria-label=".form-control-sm example" type="text"  name="Case_Number" placeholder="Case_Number" required><br>
+                </div>
+                <div class="col">
+                    <input class="form-control form-control-sm" aria-label=".form-control-sm example" type="text"  name="Caller_ID" placeholder="Caller_ID" required><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <input class="form-control form-control-sm" aria-label=".form-control-sm example" type="text"  name="Call_duration" placeholder="Call_duration" required><br>
+                </div>
+                <div class="col">
+                    <input class="form-control form-control-sm" aria-label=".form-control-sm example" input type="text" name="Premium" placeholder="Premium" required><br>
+                </div>
+                <div class="col">
+                    <input class="form-control form-control-sm" aria-label=".form-control-sm example" input type="text" name="Cover_amount" placeholder="Cover_amount" required><br>
+                </div>  
+            </div>
+                <div class="row">
+                    <div class="col">
+                        <select class="form-select form-select-sm" aria-label="Small select example" name="Start_date" required>
+                            <option value="-"> Select the Start Date </option>
+                            <option value="1st January">1st January</option>
+                            <option value="1st February">1st February</option>
+                            <option value="1st March">1st March</option>
+                            <option value="1st April">1st April</option>
+                            <option value="1st May">1st May</option>
+                            <option value="1st June">1st June</option>
+                            <option value="1st July">1st July</option>
+                            <option value="1st August">1st August</option>
+                            <option value="1st September">1st September</option>
+                            <option value="1st October">1st October</option>
+                            <option value="1st November">1st November</option>
+                            <option value="1st December">1st December</option>
+                        </select>                    
+                    </div>
+                    <div class="col">
+                        <label>Select the Debit date -></label>
+                    </div>
+                    <div class="col">
+                        <input class="form-control form-control-sm" aria-label=".form-control-sm example" input type="date" name="Debit_date"placeholder="Debit_date" required>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                        <div class="col">
+                            <select class="form-select form-select-sm" aria-label="Small select example" name="KPA_1" required>
+                                <option value="-"> The KPA Outcome 1</option>
+                                <option value="Pass">Pass</option>
+                                <option value="Product">Product</option>
+                                <option value="Compliance">Compliance</option>
+                                <option value="Data Capturing">Data Capturing</option>
+                                <option value="TCF">TCF</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <select class="form-select form-select-sm" aria-label="Small select example" name="KPA_2" required>
+                                <option value="-"> The KPA Outcome 2</option>
+                                <option value="Pass">Pass</option>
+                                <option value="Product">Product</option>
+                                <option value="Compliance">Compliance</option>
+                                <option value="Data Capturing">Data Capturing</option>
+                                <option value="TCF">TCF</option>
+                            </select>
+                        </div>
+                    <div class="col">
+                        <select class="form-select form-select-sm" aria-label="Small select example" name="KPA_3" required>
+                            <option value="-"> The KPA Outcome 3</option>
+                            <option value="Pass">Pass</option>
+                            <option value="Product">Product</option>
+                            <option value="Compliance">Compliance</option>
+                            <option value="Data Capturing">Data Capturing</option>
+                            <option value="TCF">TCF</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <select class="form-select form-select-sm" aria-label="Small select example" name="AVS_Check" required>
+                            <option value="-"> Enter the AVS Outcome</option>
+                            <option value="PASS">PASS</option>
+                            <option value="FAIL">FAIL</option>
+                            <option value="UNVERIFIED">UNVERIFIED</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select class="form-select form-select-sm" aria-label="Small select example" name="HIV_Required" required>
+                            <option value="-"> HIV Test Required? </option>
+                            <option value="YES">YES</option>
+                            <option value="NO">NO</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select class="form-select form-select-sm" aria-label="Small select example" name="QA_Correct" required>
+                            <option value="-"> QA Correction ? </option>
+                            <option value="FALSE">FALSE</option>
+                            <option value="TRUE">TRUE</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="col">
+                    <input class="form-control form-control-sm" aria-label=".form-control-sm example" input type="textField" name="Comment" placeholder="Comment" required><br>
+
+                </div>
+        <br>
+        <button class="btn btn-primary" type="Submit"> Submitting </button>
+    </form>
+
+ </div>
+{% endblock %}
