@@ -14,4 +14,4 @@ def LoginUser(request):
         else:
             messages.error(request, "Please try again, your password is wrong!")
                 
-    return render(request, 'authenticate/LoginUser.html')
+    return render(request, 'LoginUser.html')
